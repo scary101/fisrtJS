@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <script>
+        // диалоговое окно с вводом первого числа
+        num1 = prompt("Введите первое число", "0");
+        num1 = parseFloat(num1); // преобразуем введенное значение в число
+
+        // диалоговое окно с вводом второго числа
+        num2 = prompt("Введите второе число", "0");
+        num2 = parseFloat(num2); // преобразуем введенное значение в число
+
+        // вычисляем сумму
+        sum = num1 + num2;
+
+        // выводим результат на страницу
+        document.writeln("Сумма чисел " + num1 + " и " + num2 + " равна " + sum);
+    </script>
+    <h3>Калькулятор квадрата числа</h3>
+    <p> Введите число: <br>
+    <input id="user_input" type="number">
+    </p>
+    <p> Результат: <br>
+    <textarea id="result" rows="3" cols="60"></textarea>
+    </p>
+    <p>
+    <button onclick="var num = document.getElementById('user_input').value;
+    document.getElementById('result').value = num * num;">
+    Вычислить квадрат
+    </button>
+    
+    <button onclick="document.getElementById('user_input').value='';
+    document.getElementById('result').value='';">
+    Очистить
+    </button>
+    </p>
+
+    <script>
+        url = "https://www.youtube.com/";
+        document.writeln(url);
+        
+        protocolIndex = url.indexOf("://");
+        protocol = url.substr(0, protocolIndex);
+        document.writeln("Протокол: " + protocol);
+        
+        domainIndex = url.indexOf("/", protocolIndex + 3);
+        domain = url.substr(protocolIndex + 3, domainIndex - protocolIndex - 3);
+        document.writeln("Домен: " + domain);
+        
+        path = url.substr(domainIndex);
+        document.writeln("Путь: " + path);
+        </script>
+</body>
